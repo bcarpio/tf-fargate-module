@@ -12,7 +12,7 @@ resource "aws_ecs_cluster" "cluster" {
 }
 
 resource "aws_ecr_repository" "repo" {
-  name = "${var.environment}-ecr-repo"
+  name = "jenkins_build_slave"
 }
 
 resource "aws_ecr_repository_policy" "policy" {
