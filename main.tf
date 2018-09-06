@@ -1,15 +1,5 @@
 provider "aws" {}
 
-locals {
-  tags = "${map(
-    "ComcastApplicationName", "${var.app_name}",
-    "ComcastApplicationRole", "${var.role}",
-    "ComcastApplicationEnvironment", "${var.environment}",
-    "ComcastDataClassification", "${var.data_classification}",
-    "ComcastVPCClassification", "${var.vpc_classification}"
-  )}"
-}
-
 resource "aws_cloudwatch_log_group" "fargate" {
   name = "${var.environment}_fargate"
   tags {

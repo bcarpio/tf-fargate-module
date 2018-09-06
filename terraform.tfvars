@@ -1,2 +1,1 @@
-environment = "dev"
-vpc_id = "inspec"
+environment = "sandbox"
